@@ -1,6 +1,5 @@
 package com.ijse.database.entity;
 
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -15,17 +14,16 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Product {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false) //name cannot be blank at any case
+    @Column(nullable = false)
     private String name;
 
-    private Integer qty;
-
     private Double price;
+
+    private Integer qty;
 
     @ManyToOne
     @JoinColumn(name = "category_id")

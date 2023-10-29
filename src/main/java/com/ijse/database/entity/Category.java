@@ -25,7 +25,7 @@ public class Category {
 
     private String name;
 
-    @JsonIgnore
+    @JsonIgnore //to prevent continuos loading
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "category", cascade = CascadeType.ALL)
-    private List<Product> products; 
+    private List<Product> products;
 }

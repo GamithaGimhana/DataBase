@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.ijse.database.entity.Category;
 
 @Repository
-public interface CategoryRepository extends JpaRepository<Category, Long>{
-    //Custom Queries
+public interface CategoryRepository extends JpaRepository<Category, Long> {
+    
 }

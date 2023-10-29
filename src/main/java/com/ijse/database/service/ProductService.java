@@ -13,5 +13,5 @@ public interface ProductService {
     Product createProduct(ProductDTO productDTO);
     Product getProductById(Long id);
     Product updateProduct(Long id, Product product);
-    List<Product> getProductsByCategory(Long id);
+    List<Product> findByCategory(Long id);
 }
